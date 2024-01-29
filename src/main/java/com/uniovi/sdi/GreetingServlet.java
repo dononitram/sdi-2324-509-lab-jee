@@ -8,6 +8,8 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "GreetingServlet", value = "/GreetingServlet")
 public class GreetingServlet extends HttpServlet {
+    int contador = 0;
+    private Object mutex = new Object();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws
             ServletException, IOException {
